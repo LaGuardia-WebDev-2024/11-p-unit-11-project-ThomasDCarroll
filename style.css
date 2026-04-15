@@ -4,9 +4,23 @@
 html {
   background-color: white;
   padding-left: 20px;
+  text-align: center;
+  align-content: center;
 }
 
 /* ======================== CSS Rule #2 */
 h1 {
   font-family: "Poetsen One", sans-serif;
 }
+
+ol {
+  width: 60%;
+  text-align: left
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;}
