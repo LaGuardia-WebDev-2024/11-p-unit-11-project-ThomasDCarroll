@@ -1,7 +1,7 @@
 <!-- Unit 11 Project
 Requirements
 [  ] $() Select by Element, ID AND Class 
-[  ] Use Three Different jQuery Methods 
+[ x ] Use Three Different jQuery Methods 
 [  ] Add Five CSS Declarations
 [  ] Include Three Images
 
@@ -24,43 +24,68 @@ Select ONE Additional
     <button id="mem1-button">Memory #1</button>
     <button id="mem2-button">Memory #2</button>
     <button id="mem3-button">Memory #3</button>
-    <h1>My Top 3<span>Videogames</span></h1>
+    <h1>My Top 3 <span>Videogames</span></h1>
+    <div class="list">
     <ol>
+      <div>
       <li>
         <h3 id="mem1">Memory #1</h3>
-        <p>More about this memory.</p>
+        <p id="mem1ex">More about this memory.</p>
+        <img src="Fran Bow Cover.jpg" width="300" class="franbowimg">
       </li>
+      </div>
 
+      <div>
       <li>
         <h3 id="mem2">Memory #2</h3>
-        <p>More about this memory.</p>
+        <p id="mem2ex">More about this memory.</p>
       </li>
+      </div>
 
+      <div>
       <li>
         <h3 id="mem3">Memory #3</h3>
-        <p>More about this memory</p>
+        <p id="mem3ex">More about this memory</p>
       </li>
+      </div>
     </ol>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
 
       // ======================== Button #1
+      var mem1count = 1;
+
       $("#mem1-button").click(function () {
-        $("#mem1").css("color", "purple");
-        $("#mem3").text("Fran Bow");
-      });
+        if(mem1count==0){
+        $("#mem1").css("color", "#4D90A9");
+        $("#mem1").text("Fran Bow");
+        $("#mem1ex").html("<i>This is genuinely one of the best videogames ever made.</i><br>");
+        $(".franbowimg").show(1000);
+        mem1count = 1;
+      }
+        else if (mem1count==1){
+          $("#mem1").css("color", "#4D90A9");
+        $("#mem1").text("Fran Bow");
+        $("#mem1ex").html("<i>This is genuinely one of the best videogames ever made.</i><br>");
+        $(".franbowimg").hide();
+        mem1count = 0;
+        }
+        });
 
       // ======================== Button #2
       $("#mem2-button").click(function () {
-        $("#mem2").css("color", "blue");
-        $("#mem3").text("Unravel 2");
+        $("#mem2").css("color", "#16796F");
+        $("#mem2").text("Unravel 2");
+        $("#mem2ex").html("<i>Unravel 2 is so charming, and one of a few examples of videogames which use the muliplayer experience well.</i><br>");
       });
 
       // ======================== Button #3
       $("#mem3-button").click(function () {
-        $("#mem3").css("color", "green");
-        $("#mem3").text("Life is Strange");
+        $("#mem3").css("color", "#66696C");
+        $("#mem3").text("Until Dawn");
+        $("#mem3ex").html("<i>Until Dawn is the perfect horror experience.</i><br>This game works on so many levels. It's characters are beloved, the setting is perfectly creepy, and Handigo's villainy works on every level. Theres a reason this is still considered to be Supermassive's most successful project, and it's not because their other games are bad - they are actually far from it - its because Until Dawn's horror experience is unbeatable.");
       });
 
 
