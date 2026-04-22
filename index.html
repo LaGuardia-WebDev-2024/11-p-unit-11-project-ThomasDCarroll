@@ -25,29 +25,24 @@ Select ONE Additional
     <button id="mem2-button">Memory #2</button>
     <button id="mem3-button">Memory #3</button>
     <h1>My Top 3 <span>Videogames</span></h1>
-    <div class="list">
+
+    <div class="section lists">
     <ol>
-      <div>
       <li>
         <h3 id="mem1">Memory #1</h3>
         <p id="mem1ex">More about this memory.</p>
         <img src="Fran Bow Cover.jpg" width="300" class="franbowimg">
       </li>
-      </div>
 
-      <div>
       <li>
         <h3 id="mem2">Memory #2</h3>
         <p id="mem2ex">More about this memory.</p>
       </li>
-      </div>
 
-      <div>
       <li>
         <h3 id="mem3">Memory #3</h3>
         <p id="mem3ex">More about this memory</p>
       </li>
-      </div>
     </ol>
     </div>
 
@@ -55,13 +50,14 @@ Select ONE Additional
     <script>
 
       // ======================== Button #1
-      var mem1count = 1;
+      var mem1count = 0;
+      $(".franbowimg").hide();
 
       $("#mem1-button").click(function () {
         if(mem1count==0){
         $("#mem1").css("color", "#4D90A9");
         $("#mem1").text("Fran Bow");
-        $("#mem1ex").html("<i>This is genuinely one of the best videogames ever made.</i><br>");
+        $("#mem1ex").html("<i>This is genuinely one of the best videogames ever made.</i><br>Fran Bow is a horrifying exploration of mental illness in regards to grief, and the titular character is humanized through her point of view acting as the central one of the story.");
         $(".franbowimg").show(1000);
         mem1count = 1;
       }
@@ -85,7 +81,7 @@ Select ONE Additional
       $("#mem3-button").click(function () {
         $("#mem3").css("color", "#66696C");
         $("#mem3").text("Until Dawn");
-        $("#mem3ex").html("<i>Until Dawn is the perfect horror experience.</i><br>This game works on so many levels. It's characters are beloved, the setting is perfectly creepy, and Handigo's villainy works on every level. Theres a reason this is still considered to be Supermassive's most successful project, and it's not because their other games are bad - they are actually far from it - its because Until Dawn's horror experience is unbeatable.");
+        $("#mem3ex").html("<i>Until Dawn is the perfect horror experience.</i><br>This game works on so many levels. It's characters are beloved, the setting is perfectly creepy, and Handigo's villainy is known for how amazing it is. Theres a reason this is still considered to be Supermassive's most successful project, and it's not because their other games are bad - they are actually far from it - its because Until Dawn's horror experience is unbeatable.");
       });
 
 
