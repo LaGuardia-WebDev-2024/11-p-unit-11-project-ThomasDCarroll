@@ -1,12 +1,12 @@
 <!-- Unit 11 Project
 Requirements
-[  ] $() Select by Element, ID AND Class 
+[ x ] $() Select by Element, ID AND Class 
 [ x ] Use Three Different jQuery Methods 
 [  ] Add Five CSS Declarations
 [  ] Include Three Images
 
 Select ONE Additional 
-[ no ] Feature 1 - Use .hide() & .show() method
+[ yes ] Feature 1 - Use .hide() & .show() method
 [ no ] Feature 2 - Use .addClass() method
 [ no ] Feature 3 - Use .slideDown() method
 [ no ] Feature 4 - Use .mouseover() method
@@ -31,17 +31,19 @@ Select ONE Additional
       <li>
         <h3 id="mem1">Memory #1</h3>
         <p id="mem1ex">More about this memory.</p>
-        <img src="Fran Bow Cover.jpg" width="300" class="franbowimg">
+        <img src="Fran Bow.jpg" width="750" class="franbowimg">
       </li>
 
       <li>
         <h3 id="mem2">Memory #2</h3>
         <p id="mem2ex">More about this memory.</p>
+        <img src="Unravel Two.avif" width="750" class="unravelimg">
       </li>
 
       <li>
         <h3 id="mem3">Memory #3</h3>
         <p id="mem3ex">More about this memory</p>
+        <img src="Until Dawn.jpg" width="750" class="untildawnimg">
       </li>
     </ol>
     </div>
@@ -57,16 +59,37 @@ Select ONE Additional
         if(mem1count==0){
         $("#mem1").css("color", "#4D90A9");
         $("#mem1").text("Fran Bow");
-        $("#mem1ex").html("<i>This is genuinely one of the best videogames ever made.</i><br>Fran Bow is a horrifying exploration of mental illness in regards to grief, and the titular character is humanized through her point of view acting as the central one of the story.");
+        $("#mem1ex").html("<i>This is genuinely one of the best videogames ever made.</i><br>Fran Bow is a horrifying exploration of mental illness in regards to grief, and the titular character is humanized through her point of view acting as the central one of the story. Ive played this game like 5 different times, and every time I do I'm reminded of just how much there is to love about it. The atmosphere of Fran Bow is perfect, and I think that the ways in which the game is stylized create such a great tone. I need to replay Fran Bow now omg.");
         $(".franbowimg").show(1000);
         mem1count = 1;
       }
         else if (mem1count==1){
           $("#mem1").css("color", "#4D90A9");
         $("#mem1").text("Fran Bow");
-        $("#mem1ex").html("<i>This is genuinely one of the best videogames ever made.</i><br>");
+        $("#mem1ex").html("<i>This is genuinely one of the best videogames ever made.</i><br>Fran Bow is a horrifying exploration of mental illness in regards to grief, and the titular character is humanized through her point of view acting as the central one of the story. Ive played this game like 5 different times, and every time I do I'm reminded of just how much there is to love about it. The atmosphere of Fran Bow is perfect, and I think that the ways in which the game is stylized create such a great tone. I need to replay Fran Bow now omg.");
         $(".franbowimg").hide();
         mem1count = 0;
+        }
+        });
+
+      // ======================== Button #2
+      var mem2count = 0;
+      $(".unravelimg").hide();
+
+      $("#mem2-button").click(function () {
+        if(mem1count==0){
+        $("#mem2").css("color", "#16796F");
+        $("#mem2").text("Unravel 2");
+        $("#mem2ex").html("<i>Unravel 2 is so charming, and one of a few examples of videogames which use the muliplayer experience well.</i><br>");
+        $(".unravelimg").show(1000);
+        mem2count = 1;
+      }
+        else if (mem2count==1){
+          $("#mem2").css("color", "#16796F");
+        $("#mem2").text("Unravel 2");
+        $("#mem2ex").html("<i>Unravel 2 is so charming, and one of a few examples of videogames which use the muliplayer experience well.</i><br>");
+        $(".unravelimg").hide();
+        mem2count = 0;
         }
         });
 
