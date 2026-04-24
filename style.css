@@ -3,19 +3,33 @@
 /* ======================== CSS Rule #1 */
 html {
   background-color: white;
-  padding-left: 20px;
   text-align: center;
   align-content: center;
+  color:rgb(0, 0, 0);
+  background-image: url(5_71.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #214cc2;
+  background-blend-mode: multiply;
 }
 
 /* ======================== CSS Rule #2 */
 h1 {
-  font-family: "Poetsen One", sans-serif;
+  font-family: "Lexend", sans-serif;
+  color: aliceblue;
+}
+
+p {
+  font-family: "Lexend", sans-serif;
+  color: aliceblue;
 }
 
 ol {
   width: 40%;
   text-align: left;
+  font-family: "Lexend", sans-serif;
+  color: aliceblue;
 }
 
 .section {
